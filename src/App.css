@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  background-color: rgb(33, 0, 63);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+.tareas{
+  border: solid 1px black;
+  width: 600px;
+  min-height: 500px;
+  background-color: rgb(131, 158, 161);
+  padding: 25px;
+  margin: 10px;
+  border-radius: 25px;
+}
+h1{
+  color: black;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  margin: 20px;
+}
+
+.tarea-contenedor {
+  width: 500px;
+  min-height: 65px;
+  background-color: #1b1b32;
+  margin: 5px 0;
+  padding: 8px 15px 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.tarea-contenedor.completada {
+  background-color: #76ebf8;
+  text-decoration: line-through;
+
+}
+
+.tarea-texto{
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+
+.tarea-icono{
+  color: white;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.tarea-formulario {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tarea-input{
+  width: 350px;
+  font-size: 20px;
+  background-color: white;
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #00471b;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.tarea-boton {
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: #00471b;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.tareas-lista-contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.tarea-contenedor:nth-child(3n + 1){
+  background-color: #1b1b32;
+}
+
+.tarea-contenedor:nth-child(3n + 2){
+  background-color: #2a2a40;
+}
+
+.tarea-contenedor:nth-child(3n + 3){
+  background-color: #3b3b4f;
 }
