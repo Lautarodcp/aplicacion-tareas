@@ -10,14 +10,13 @@ const Formulario = (props) =>{
     }
     const manejarEnvio = (evento) => {
         evento.preventDefault();
-
         const tareaNueva = {
             id: uuidv4(),
             texto: input,
             completada: false
         }
         props.onSubmit(tareaNueva);
-        manejarCambio("");
+        evento.target.reset();
     }
 
     return (
